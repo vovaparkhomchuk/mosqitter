@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useRef, useEffect } from 'react';
 import './App.css';
+import Header from './Components/Header';
+import BlockVideo from './Components/BlockVideo';
+import WhatIs from './Components/WhatIs';
+import Usage from './Components/Usage';
+import Mission from './Components/Mission';
+import Clients from './Components/Clients';
+import Showreel from './Components/Showreel';
+import Cases from './Components/Cases';
+import { motion, useElementScroll } from 'framer-motion';
 
 function App() {
+  console.log(typeof motion);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BlockVideo />
+      <WhatIs />
+      <Usage />
+      <Mission />
+      <Clients />
+      <Showreel />
+      <Cases />
     </div>
   );
 }
