@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import link from '../Images/link.png';
 
 export default function Cases() {

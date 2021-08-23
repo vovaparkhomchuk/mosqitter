@@ -43,7 +43,7 @@ button {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 
 .menu {
@@ -59,7 +59,7 @@ button {
   color: white;
   font-size: 18px;
   font-family: 'NexaBold';
-  margin-right: 30px;
+  margin-right: 15px;
   opacity: 0.5;
   padding: 4px 6px;
 }
@@ -465,7 +465,7 @@ button.circle {
 
 .cases-item-logo {
   width: 140px;
-  height: 35px;
+  height: 40px;
   border-radius: 100px;
   background-color: white;
   margin-left: 25px;
@@ -574,4 +574,532 @@ button.circle {
 }
 .cases-item:nth-child(10) {
   background-color: #26abe2;
+}
+
+.form {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  background: rgb(52, 121, 88);
+  background: linear-gradient(
+    180deg,
+    rgba(52, 121, 88, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: relative;
+}
+
+.form-lines {
+  width: 100%;
+  height: 100%;
+  background: url('./Images/kines.png');
+  position: absolute;
+}
+
+.form1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.form1-text {
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0px 60px;
+  color: white;
+  opacity: 0.8;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.brand-head {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding-left: 60px;
+  font-size: 48px;
+  justify-content: space-between;
+}
+.brand-line {
+  width: calc(70% - 80px);
+  height: 1px;
+  background-color: white;
+  opacity: 0.3;
+  position: relative;
+  top: -4px;
+}
+
+.brand-head-text {
+  position: relative;
+  top: -30px;
+  width: 30%;
+}
+
+.brand-ltd,
+.brand-adress,
+.brand-contacts {
+  box-sizing: border-box;
+  padding-left: 115px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.brand-ltd {
+  font-size: 32px;
+  position: relative;
+  left: -50px;
+}
+
+.brand-ltd img {
+  margin-right: 14px;
+}
+
+.brand-adress {
+  font-family: 'Nexa Light';
+}
+
+.brand-contacts {
+  margin-bottom: 100px;
+}
+
+.form-block {
+  color: white;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-l-r {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-l-r input,
+.form-l-r textarea {
+  background-color: #347958;
+  outline: none;
+  border-radius: 5px;
+  padding: 18px 20px;
+  padding-top: 22px;
+  color: white;
+  font-size: 28px;
+  border: none;
+  font-family: 'Nexa Bold';
+}
+
+.form-l-r textarea {
+  height: 136px !important;
+}
+
+.form-l-r input[type='checkbox'] {
+  position: relative;
+  cursor: pointer;
+  padding: 40px;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin-top: 16px;
+}
+
+input[type='checkbox']:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+}
+input[type='checkbox']:checked:after {
+  content: '';
+  display: block;
+  height: 32px;
+  width: 22px;
+  border: solid #347958;
+  border-width: 0px 4px 4px 0;
+  transform: rotate(49deg);
+  position: absolute;
+  top: 2px;
+  left: 13px;
+}
+
+.form-l {
+  width: 30%;
+}
+.form-r {
+  width: 68%;
+}
+
+.form-r img {
+  width: 100%;
+  min-width: 500px;
+}
+
+*:focus {
+  outline: none;
+}
+
+.inp {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 40px;
+}
+.inp label {
+  background-color: #357857;
+  width: fit-content;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 22px;
+  margin-left: 20px;
+  padding: 6px 12px;
+  position: absolute;
+  top: -23px;
+}
+
+.inp label span {
+  opacity: 0.5;
+}
+
+.inp-check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.check-text {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 16px;
+}
+
+.sumbit-block {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 60px;
+  margin-bottom: 60px;
+}
+.sumbit-block button {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-radius: 5px;
+  color: #347958;
+  font-size: 25px;
+  padding-top: 8px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 40px 60px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+.column-name {
+  opacity: 0.5;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.column-item {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.column-item-app {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+  width: 180px;
+  border-radius: 50px;
+  cursor: pointer;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 15px;
+}
+.column-item-app img {
+  width: 25px;
+}
+
+.app-l {
+  display: flex;
+  align-items: center;
+}
+
+.app-r {
+  color: black;
+  margin-left: 15px;
+}
+
+.app-r1 {
+  font-size: 13px;
+  color: #8e8e8e;
+}
+.app-r1 {
+  font-size: 16px;
+}
+
+.footer-column a img {
+  width: 35px;
+}
+
+.footer-column a:nth-child(2) {
+  margin-left: 20px;
+}
+
+.footer-column:nth-child(4) {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1260px) {
+  .form1-text {
+    font-size: 40px;
+  }
+
+  button.circle {
+    width: 5px;
+    height: 12px;
+  }
+  .gradient-text {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cases-list {
+    flex-direction: column;
+  }
+  .cases-item {
+    width: 100%;
+  }
+  .form-l-r {
+    flex-direction: column;
+  }
+  .form-l,
+  .form-r {
+    width: 100%;
+  }
+  .menu {
+    display: none;
+  }
+
+  .menu-btns {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+
+  .menu-btns button:nth-child(n) {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .main-text,
+  .small-text,
+  .main-text-left,
+  .features {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 60px;
+  }
+
+  .main-text-left {
+    padding-top: 105px;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .feature {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .arrow-l,
+  .arrow-r {
+    width: 50px;
+  }
+  .form-r {
+    display: none;
+  }
+  .form1 {
+    padding: 100px 0px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .usage-option {
+    width: 45%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 50px;
+  }
+
+  .footer-column:nth-child(4) {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .main-text,
+  .main-text-left,
+  .med-text,
+  .usage-main-text,
+  .clients-text,
+  .showreel-text,
+  .form1-text {
+    font-size: 8vw;
+  }
+
+  .showreel-text {
+    margin-bottom: 40px;
+  }
+
+  .gradient-text,
+  .brand-head-text,
+  .column-name {
+    font-size: 7vw;
+  }
+
+  .brand-ltd,
+  .brand-contacts {
+    font-size: 6vw;
+  }
+
+  .small-text,
+  .feature-main-text,
+  .mission-text,
+  .usage-option,
+  .gradient-date,
+  .gradient-link,
+  .brand-adress,
+  .column-item {
+    font-size: 5vw;
+  }
+
+  .feature-text,
+  .usage-option {
+    font-size: 4vw;
+  }
+
+  .main-text,
+  .small-text,
+  .main-text-left,
+  .features {
+    padding: 0px 20px;
+  }
+  .main-text-left {
+    padding-top: 105px;
+  }
+  .usage-main-text {
+    padding: 0px 15px;
+    padding-top: 85px;
+  }
+  .clients-text,
+  .clients-imgs {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0px 15px;
+    padding-top: 80px;
+  }
+  .clients-imgs div {
+    width: 45%;
+  }
+
+  .form1 {
+    padding: 100px 15px;
+    box-sizing: border-box;
+  }
+
+  .form1-text {
+    padding: 0px;
+  }
+
+  .brand-head {
+    padding-left: 15px;
+  }
+
+  .brand-line {
+    width: calc(60% - 80px);
+  }
+
+  .brand-head-text {
+    top: -4vw;
+    width: 60%;
+  }
+
+  .brand-ltd,
+  .brand-adress,
+  .brand-contacts {
+    padding-left: 66px;
+  }
+
+  .form-l-r {
+    padding: 40px 15px;
+  }
+
+  .sumbit-block {
+    padding: 0px 15px;
+  }
+
+  .showreel-menu {
+    padding: 0px;
+  }
+
+  button.circle {
+    padding: 0px;
+    width: 4px;
+    height: 4px;
+  }
+
+  .footer {
+    padding: 40px 15px;
+  }
+  .menu-btns button:nth-child(n) {
+    font-size: 3vw;
+    padding: 0px 5px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+  }
+
+  .arrow-l,
+  .arrow-r {
+    width: 30px;
+  }
+
+  .circles {
+    width: 70%;
+    padding: 0px;
+  }
 }

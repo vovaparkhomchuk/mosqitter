@@ -8,6 +8,8 @@ import Mission from './Components/Mission';
 import Clients from './Components/Clients';
 import Showreel from './Components/Showreel';
 import Cases from './Components/Cases';
+import Form from './Components/Form';
+import Footer from './Components/Footer';
 import { motion, useElementScroll } from 'framer-motion';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
       <Clients />
       <Showreel />
       <Cases />
+      <Form />
+      <Footer />
     </div>
   );
 }
