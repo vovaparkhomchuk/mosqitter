@@ -29,7 +29,7 @@ export default function Usage() {
       </div>
 
       <div className="usage-options">
-        <ScrollAnimation animateIn="bounceInUp" animateOnce={true} delay={400}>
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={400}>
           <div className="usage-option">
             <img src={usage1} />
             condominium association

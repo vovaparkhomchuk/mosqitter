@@ -10,7 +10,7 @@ export default function Mission() {
         <div className="mission-text">
           <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             Mosqitter’s mission is to help humanity to make the Earth more
-            ecological, safe for humans and animals by excluding usage of
+            ecological, safe for humans and animals by reducing usage of
             insecticides and chemicals. The solution will enable many countries
             to save large amount of resources by protecting health of its
             citizens in a natural and sustainable way.
