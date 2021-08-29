@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+input {
+  font-family: 'NexaBold';
+}
+
 .header {
   width: 100vw;
   height: 70px;
@@ -123,7 +127,7 @@ button {
 
 .block-video {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   background-color: #101010;
 }
 
@@ -133,19 +137,74 @@ button {
   height: 100%;
   padding: 0px 10px;
   padding-top: 70px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
+  position: relative;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  z-index: 1;
+}
+video {
+  object-fit: cover;
+  /* position: fixed; */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
 }
 
 .round-block {
   width: 100%;
   height: 100%;
-  background-color: #13281a;
-  border-radius: 10px;
+  background-color: #00000038;
+  /* border-radius: 10px; */
   display: flex;
   color: white;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .main-text,
@@ -165,6 +224,9 @@ button {
   /* width: 60%; */
   text-align: center;
   /* line-height: 60px; */
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .small-text {
@@ -253,6 +315,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .usage-main-text {
@@ -321,6 +384,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: white;
 }
 
 .clients-text {
@@ -334,20 +399,26 @@ button {
 .clients-imgs {
   width: 60%;
   margin-bottom: 70px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .clients-imgs div {
-  width: 28%;
+  width: 45%;
   margin: 0px 2.5%;
   float: left;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 150px;
+  margin-bottom: 40px;
 }
 
 .clients-imgs img {
   width: 80%;
+}
+
+.animated {
+  position: relative;
 }
 
 .showreel {
@@ -357,6 +428,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .showreel-text {
@@ -378,9 +450,10 @@ button {
 .showreel-imgs {
   width: 100%;
   height: 700px;
-  background-color: #684b4b;
+  /* background-color: #684b4b; */
   border-radius: 5px;
   position: relative;
+  /* border: solid white 1px; */
 }
 
 .showreel-menu {
@@ -464,6 +537,7 @@ button.circle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .cases-list {
@@ -491,6 +565,39 @@ button.circle {
   background-color: white;
   margin-left: 25px;
   margin-top: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cases-item:nth-child(1) .cases-item-logo {
+  background-image: url('./Images/cases/case1.png');
+}
+.cases-item:nth-child(2) .cases-item-logo {
+  background-image: url('./Images/cases/case2.png');
+}
+.cases-item:nth-child(3) .cases-item-logo {
+  background-image: url('./Images/cases/case3.png');
+}
+.cases-item:nth-child(4) .cases-item-logo {
+  background-image: url('./Images/cases/case4.png');
+}
+.cases-item:nth-child(5) .cases-item-logo {
+  background-image: url('./Images/cases/case5.png');
+}
+.cases-item:nth-child(6) .cases-item-logo {
+  background-image: url('./Images/cases/case6.png');
+}
+.cases-item:nth-child(7) .cases-item-logo {
+  background-image: url('./Images/cases/case7.png');
+}
+.cases-item:nth-child(8) .cases-item-logo {
+  background-image: url('./Images/cases/case8.png');
+}
+.cases-item:nth-child(9) .cases-item-logo {
+  background-image: url('./Images/cases/case9.png');
+}
+.cases-item:nth-child(10) .cases-item-logo {
+  background-image: url('./Images/cases/case10.png');
 }
 
 .gradient-block {
@@ -517,6 +624,7 @@ button.circle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .gradient-dark {
@@ -535,6 +643,7 @@ button.circle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .gradient-text {
@@ -555,6 +664,8 @@ button.circle {
   overflow: hidden;
   margin-bottom: 25px;
   padding: 2px 0px;
+  height: 31px;
+  width: max-content;
 }
 .gradient-link img {
   width: 20px;
@@ -609,6 +720,44 @@ button.circle {
     rgba(0, 0, 0, 1) 100%
   );
   position: relative;
+}
+
+.form-sent {
+  width: 480px;
+  position: fixed;
+  top: 100px;
+  right: 60px;
+  background: #00b76a;
+  padding: 40px 30px;
+  padding-left: 100px;
+  box-sizing: border-box;
+  z-index: 3;
+  color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.form-sent img {
+  position: absolute;
+  width: 50px;
+  left: 30px;
+  top: 30px;
+}
+
+.form-sent-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.form-sent-text div:nth-child(1) {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.form-sent-text div:nth-child(2) {
+  margin-bottom: 40px;
 }
 
 .form-lines {
@@ -806,6 +955,7 @@ input[type='checkbox']:checked:after {
   padding: 6px 12px;
   position: absolute;
   top: -23px;
+  z-index: 2;
 }
 
 .inp label span {
@@ -850,6 +1000,7 @@ input[type='checkbox']:checked:after {
   color: white;
   font-size: 16px;
   justify-content: space-between;
+  position: relative;
 }
 
 .column-name {
@@ -893,7 +1044,8 @@ input[type='checkbox']:checked:after {
   font-size: 13px;
   color: #8e8e8e;
 }
-.app-r1 {
+.app-r1,
+.app-r2 {
   font-size: 16px;
 }
 
@@ -923,6 +1075,7 @@ input[type='checkbox']:checked:after {
   align-items: center;
   z-index: 20;
   background-color: #27513d;
+  left: 0px;
 }
 
 .mobile-menu button {
@@ -965,6 +1118,17 @@ input[type='checkbox']:checked:after {
 }
 
 @media screen and (max-width: 1157px) {
+  .main-text,
+  .small-text,
+  .main-text-left,
+  .features,
+  .form1-text {
+    line-height: initial;
+  }
+  .header {
+    box-sizing: border-box;
+    padding: 0px 10px;
+  }
   .menuButton {
     display: block;
   }
@@ -1002,6 +1166,10 @@ input[type='checkbox']:checked:after {
 }
 
 @media screen and (max-width: 920px) {
+  .form-l-r input,
+  .form-l-r textarea {
+    font-size: 5vw;
+  }
   .main-text,
   .small-text,
   .main-text-left,
@@ -1190,7 +1358,7 @@ input[type='checkbox']:checked:after {
 
   .menu-btns a:nth-child(1) {
     display: block;
-    padding: 0px 10px;
+    padding: 0px 0px;
     padding-bottom: initial;
   }
 }

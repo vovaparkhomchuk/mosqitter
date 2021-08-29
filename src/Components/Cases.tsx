@@ -2,7 +2,39 @@ import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import link from '../Images/link.png';
 
+import case1 from '../Images/cases/case1.png';
+import case2 from '../Images/cases/case1.png';
+import case3 from '../Images/cases/case1.png';
+import case4 from '../Images/cases/case1.png';
+import case5 from '../Images/cases/case1.png';
+import case6 from '../Images/cases/case1.png';
+import case7 from '../Images/cases/case1.png';
+import case8 from '../Images/cases/case1.png';
+import case9 from '../Images/cases/case1.png';
+import case10 from '../Images/cases/case1.png';
+
 export default function Cases() {
+  const link1 =
+    'https://www.crdfglobal.org/news/crdf-global-supports-innovative-and-female-led-entrepreneurship-ukraine?fbclid=IwAR0AxXY2ANgWVXZChQAZoiXDUtEOiDnxunhRHSPPnPwgcFl5EEVa4qkh6Gk';
+  const link2 =
+    'https://tech.liga.net/technology/novosti/ukraintsy-pridumali-gadjet-istreblyayuschiy-komarov-samok';
+  const link3 =
+    'https://inventure.com.ua/upload/library/Ukrainian%20Venture%20Capital%20and%20Private%20Equity%20Overview%202019.pdf';
+  const link4 =
+    'https://awards.center42.tech/results2020?fbclid=IwAR2Ek5GpRhoQtlvcEhbXrS5ItQjk6atMXxRFeldgNQuyWGGxGFO69oCdTiI#rec208017840';
+  const link5 =
+    'https://hromadske.ua/posts/ukrayinska-sistemu-borotbi-z-komarami-peremogla-na-amerikanskomu-investicijnomu-konkursi';
+  const link6 =
+    'https://websummit.com/blog/web-summits-tech-for-good-startups?fbclid=IwAR1z-pGdZAdSGlAoddmLzj_EQomb9NwMx5fERFqXmCQ9QlodUcRFG3yE9kY';
+  const link7 =
+    'https://www.selectusasummit.us/Programming/SelectUSA-Tech-Pitch-Sessions-Results';
+  const link8 =
+    'https://techiia.com/ua/news/4-roki-na-ces-yakij-efekt-dlya-ukrayinskih-startapiv';
+  const link9 =
+    'https://usf.com.ua/ukrainskij-fond-startapiv-proviv-visimnadcyatij-pitch-day/';
+  const link10 =
+    'https://itarena.ua/meet-it-arena-2020-startup-competition-semi-finalists/?fbclid=IwAR3DIv08IWvJjHoMvBKyf_Rd2iSItQ6cP3lVp0DiviCC0e9pJ8zhewrzIto';
+
   return (
     <div className="cases">
       <div className="showreel-text">cases</div>
@@ -16,12 +48,9 @@ export default function Cases() {
                 in Ukraine
               </div>
               <div className="gradient-date">Jan 11, 2021</div>
-              <a
-                href="https://www.crdfglobal.org/news"
-                className="gradient-link"
-              >
+              <a href={link1} className="gradient-link">
                 <img src={link} />
-                https://www.crdfglobal.org/news
+                {link1}
               </a>
             </div>
           </div>
@@ -34,12 +63,9 @@ export default function Cases() {
                 Украинцы придумали гаджет, истребляющий комаров-самок
               </div>
               <div className="gradient-date">Oct 18, 2019</div>
-              <a
-                href="https://www.crdfglobal.org/news"
-                className="gradient-link"
-              >
+              <a href={link2} className="gradient-link">
                 <img src={link} />
-                https://www.crdfglobal.org/news
+                {link2}
               </a>
             </div>
           </div>
@@ -52,12 +78,9 @@ export default function Cases() {
                 Ukrainian Venture Capital and Private Equity Overview 2019
               </div>
               <div className="gradient-date">2019</div>
-              <a
-                href="https://www.crdfglobal.org/news"
-                className="gradient-link"
-              >
+              <a href={link3} className="gradient-link">
                 <img src={link} />
-                https://www.crdfglobal.org/news
+                {link3}
               </a>
             </div>
           </div>
@@ -70,9 +93,9 @@ export default function Cases() {
                 Results of Ukraine 2020 Innovation Ukraine
               </div>
               <div className="gradient-date">2019</div>
-              <a href="https://awards.center42.tech/" className="gradient-link">
+              <a href={link4} className="gradient-link">
                 <img src={link} />
-                https://awards.center42.tech/
+                {link4}
               </a>
             </div>
           </div>
@@ -86,9 +109,9 @@ export default function Cases() {
                 американському інвестиційному конкурсі
               </div>
               <div className="gradient-date">Jun 17, 2021</div>
-              <a href="https://hromadske.ua/posts" className="gradient-link">
+              <a href={link5} className="gradient-link">
                 <img src={link} />
-                https://hromadske.ua/posts
+                {link5}
               </a>
             </div>
           </div>
@@ -101,12 +124,9 @@ export default function Cases() {
                 Introducing 8 Web Summit startups using tech for good
               </div>
               <div className="gradient-date">Oct 13, 2020</div>
-              <a
-                href="https://www.selectusasummit.us/"
-                className="gradient-link"
-              >
+              <a href={link6} className="gradient-link">
                 <img src={link} />
-                https://www.selectusasummit.us/
+                {link6}
               </a>
             </div>
           </div>
@@ -119,12 +139,9 @@ export default function Cases() {
                 SelectUSA Tech Pitching Session Results
               </div>
               <div className="gradient-date">Jun 7, 2021</div>
-              <a
-                href="https://www.selectusasummit.us/"
-                className="gradient-link"
-              >
+              <a href={link7} className="gradient-link">
                 <img src={link} />
-                https://www.selectusasummit.us/
+                {link7}
               </a>
             </div>
           </div>
@@ -137,9 +154,9 @@ export default function Cases() {
                 4 роки на CES: який ефект для українських стартапів?
               </div>
               <div className="gradient-date">2021</div>
-              <a href="https://techiia.com/ua/news/" className="gradient-link">
+              <a href={link8} className="gradient-link">
                 <img src={link} />
-                https://techiia.com/ua/news/
+                {link8}
               </a>
             </div>
           </div>
@@ -152,12 +169,9 @@ export default function Cases() {
                 Український фонд стартапів провів вісімнадцятий pitch day
               </div>
               <div className="gradient-date">Dec 14, 2020</div>
-              <a
-                href="https://www.crdfglobal.org/news"
-                className="gradient-link"
-              >
+              <a href={link9} className="gradient-link">
                 <img src={link} />
-                https://www.crdfglobal.org/news
+                {link9}
               </a>
             </div>
           </div>
@@ -170,9 +184,9 @@ export default function Cases() {
                 Meet IT Arena 2020 Startup Competition Semi-Finalists
               </div>
               <div className="gradient-date">Sep 28, 2020</div>
-              <a href="https://itarena.ua/" className="gradient-link">
+              <a href={link10} className="gradient-link">
                 <img src={link} />
-                https://itarena.ua/
+                {link10}
               </a>
             </div>
           </div>

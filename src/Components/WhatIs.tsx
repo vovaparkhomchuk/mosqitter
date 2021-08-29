@@ -41,7 +41,7 @@ export default function WhatIs() {
             <span className="feature-main-text">Patented smart solution</span>
             <ScrollAnimation
               animateIn="fadeInUp"
-              delay={700}
+              delay={600}
               animateOnce={true}
             >
               <span className="feature-text">
@@ -55,7 +55,7 @@ export default function WhatIs() {
             <span className="feature-main-text">50m radius</span>
             <ScrollAnimation
               animateIn="fadeInRight"
-              delay={1200}
+              delay={900}
               animateOnce={true}
             >
               <span className="feature-text">

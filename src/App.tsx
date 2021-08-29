@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import BlockVideo from './Components/BlockVideo';
@@ -13,11 +13,15 @@ import Footer from './Components/Footer';
 import { motion, useElementScroll } from 'framer-motion';
 
 function App() {
-  console.log(typeof motion);
+  const [videoSoundMuted, setVideoSoundMuted] = useState(false);
+
   return (
     <div className="App">
-      <Header />
-      <BlockVideo />
+      <Header
+        videoSoundMuted={videoSoundMuted}
+        setVideoSoundMuted={setVideoSoundMuted}
+      />
+      <BlockVideo videoSoundMuted={videoSoundMuted} />
       <WhatIs />
       <Usage />
       <Mission />

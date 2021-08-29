@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import backgroundVideo from '../Video/mosqitter_promo FULL_.mp4';
 
-export default function BlockVideo() {
+interface VideoProps {
+  videoSoundMuted: boolean;
+}
+
+export default function BlockVideo({ videoSoundMuted }: VideoProps) {
+  const refVideo = useRef(null);
+
+  useEffect(() => {
+    if (!refVideo.current) {
+      return;
+    }
+
+    if (videoSoundMuted && refVideo && refVideo.current) {
+      //open bug since 2017 that you cannot set muted in video element https://github.com/facebook/react/issues/10389
+      // @ts-ignore: Object is possibly 'null'.
+      // refVideo.current.defaultMuted = false;
+      // @ts-ignore: Object is possibly 'null'.
+      refVideo.current.muted = false;
+    }
+
+    // @ts-ignore: Object is possibly 'null'.
+    // refVideo.current.srcObject = src;
+  }, []);
+
   return (
     <div className="block-video">
       <div className="video">
+        <video ref={refVideo} autoPlay loop muted id="myVideo">
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
         <div className="round-block">
           <div className="main-text">
             <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={200}>

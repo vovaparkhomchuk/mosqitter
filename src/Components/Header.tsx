@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../Images/logo.png';
 import menuButton from '../Images/menuButton.png';
 import { motion, useElementScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { Animated } from 'react-animated-css';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import FileSaver from 'file-saver';
 
-export default function Header() {
+interface HeaderProps {
+  videoSoundMuted: boolean;
+  setVideoSoundMuted: (muted: boolean) => void;
+}
+
+export default function Header({
+  videoSoundMuted,
+  setVideoSoundMuted
+}: HeaderProps) {
   const [actives, setActives] = useState(['menu-active', '', '', '', '']);
   const [showMenu, setShowMenu] = useState(false);
+  const [menuAnim, setMenuAnim] = useState(false);
+  const [scrolledd, setScrolled] = useState(0);
   const tapOptions = {
     scale: 0.9
   };
@@ -20,19 +32,83 @@ export default function Header() {
     let newActives = ['', '', '', '', ''];
     newActives[id] = 'menu-active';
     setActives(newActives);
+    // console.log({ id });
   };
 
   const callMenu = () => {
+    // if (!showMenu)
     setShowMenu(!showMenu);
+    // else {
+    //   setTimeout(() => setShowMenu(!showMenu), 550);
+    // }
+    setMenuAnim(!menuAnim);
   };
+
+  const blockVideo = document.getElementsByClassName('block-video')[0];
+  const whatIs = document.getElementsByClassName('what-is')[0];
+  const usage = document.getElementsByClassName('usage')[0];
+  const mission = document.getElementsByClassName('mission')[0];
+  const cases = document.getElementsByClassName('cases')[0];
+  const clients = document.getElementsByClassName('clients')[0];
+
+  const blockVidText = document.getElementsByClassName('main-text')[0];
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    let scrolled = currPos.y * -1;
+    setScrolled(scrolled);
+
+    if (
+      blockVideo instanceof HTMLElement &&
+      whatIs instanceof HTMLElement &&
+      usage instanceof HTMLElement &&
+      mission instanceof HTMLElement &&
+      cases instanceof HTMLElement &&
+      clients instanceof HTMLElement &&
+      blockVidText instanceof HTMLElement
+    ) {
+      if (
+        scrolledd >= blockVideo.offsetTop &&
+        scrolledd < usage.offsetTop - 70
+      ) {
+        headerMenuClick(0);
+      } else if (
+        scrolledd >= usage.offsetTop - 70 &&
+        scrolledd < mission.offsetTop - 70
+      ) {
+        headerMenuClick(1);
+      } else if (
+        scrolledd >= mission.offsetTop - 70 &&
+        scrolledd < clients.offsetTop - 70
+      ) {
+        headerMenuClick(2);
+      } else if (
+        scrolledd >= clients.offsetTop - 70 &&
+        scrolledd < clients.offsetTop + clients.offsetHeight - 70
+      ) {
+        headerMenuClick(3);
+      } else if (scrolledd >= cases.offsetTop - 70) {
+        headerMenuClick(4);
+      }
+
+      if (
+        scrolledd >= blockVidText.offsetTop - 70 &&
+        scrolledd < whatIs.offsetTop - 70 &&
+        videoSoundMuted
+      ) {
+        // setVideoSoundMuted(false);
+      } else {
+        // setVideoSoundMuted(true);
+      }
+    }
+  });
 
   const MobileMenu = () => (
     <Animated
-      animationIn="pulse"
+      animationIn="slideInDown"
       // animationIn="bounceInDown"
-      animationOut="fadeOut"
-      animationInDuration={300}
-      isVisible={showMenu}
+      animationOut="slideOutDown"
+      animationInDuration={150}
+      isVisible={menuAnim}
       className="mobile-menu"
     >
       <motion.button
@@ -119,7 +195,7 @@ export default function Header() {
       <div className="menu">
         <Link to="what-is" smooth={true}>
           <motion.button
-            onClick={() => headerMenuClick(0)}
+            // onClick={() => headerMenuClick(0)}
             className={actives[0]}
             whileTap={tapOptions}
             whileHover={hoverOptions}
@@ -129,7 +205,7 @@ export default function Header() {
         </Link>
         <Link to="usage" smooth={true}>
           <motion.button
-            onClick={() => headerMenuClick(1)}
+            // onClick={() => headerMenuClick(1)}
             className={actives[1]}
             whileTap={tapOptions}
             whileHover={hoverOptions}
@@ -139,7 +215,7 @@ export default function Header() {
         </Link>
         <Link to="mission" smooth={true}>
           <motion.button
-            onClick={() => headerMenuClick(2)}
+            // onClick={() => headerMenuClick(2)}
             className={actives[2]}
             whileTap={tapOptions}
             whileHover={hoverOptions}
@@ -149,7 +225,7 @@ export default function Header() {
         </Link>
         <Link to="clients" smooth={true}>
           <motion.button
-            onClick={() => headerMenuClick(3)}
+            // onClick={() => headerMenuClick(3)}
             className={actives[3]}
             whileTap={tapOptions}
             whileHover={hoverOptions}
@@ -159,7 +235,7 @@ export default function Header() {
         </Link>
         <Link to="cases" smooth={true}>
           <motion.button
-            onClick={() => headerMenuClick(4)}
+            // onClick={() => headerMenuClick(4)}
             className={actives[4]}
             whileTap={tapOptions}
             whileHover={hoverOptions}
@@ -178,7 +254,15 @@ export default function Header() {
           <img src={menuButton} />
         </motion.button>
 
-        <motion.button whileTap={tapOptions}>
+        <motion.button
+          whileTap={tapOptions}
+          onClick={() => {
+            FileSaver.saveAs(
+              process.env.PUBLIC_URL + '/resource/Mosqitter_eng_.pdf',
+              'Mosqitter_Eng.pdf'
+            );
+          }}
+        >
           download PDF<span className="pdf-remove">presentation</span>
         </motion.button>
 

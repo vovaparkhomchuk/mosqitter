@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import pic from '../Images/pic.png';
 import ua from '../Images/ua-logo.png';
 import { motion } from 'framer-motion';
+import formSent from '../Images/formSent.png';
+import { Animated } from 'react-animated-css';
+import { send } from 'emailjs-com';
 
 export default function Form() {
+  const [showSent, setShowSent] = useState(false);
+  const [vis, setVis] = useState(true);
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [company, setCompany] = useState('');
+  const [subject, setSubject] = useState('');
+  const [question, setQuestion] = useState('');
+  const [check, setCheck] = useState(false);
+
   const tapOptions = {
     scale: 1.01
   };
@@ -11,8 +25,73 @@ export default function Form() {
   const hoverOptions = {
     scale: 1.01
   };
+
+  const submitForm = () => {
+    if (
+      name !== '' &&
+      email !== '' &&
+      mobile !== '' &&
+      subject !== '' &&
+      question !== '' &&
+      check === true
+    ) {
+      const sendingObject = {
+        name,
+        email,
+        mobile,
+        company,
+        subject,
+        question,
+        check
+      };
+
+      send(
+        'service_yzzzeor',
+        'template_clhw8vr',
+        {
+          message: sendingObject
+        },
+        'user_O9EGi1hpz6wg5oIxHl7lh'
+      )
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          if (!showSent) {
+            setShowSent(!showSent);
+            setTimeout(() => {
+              setVis(!vis);
+            }, 2000);
+            setTimeout(() => {
+              setShowSent(false);
+              setVis(true);
+            }, 3000);
+          }
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+        });
+    }
+  };
+
+  const FormSent = () => (
+    <Animated
+      animationIn="slideInRight"
+      animationOut="fadeOut"
+      animationInDuration={300}
+      isVisible={vis}
+      className="form-sent"
+    >
+      <img src={formSent} />
+      <div className="form-sent-text">
+        <div>Thank you!</div>
+        <div>We will contact you shortly after processing your form. </div>
+        <div>Usually we reply to our clients within a day</div>
+      </div>
+    </Animated>
+  );
+
   return (
     <div className="form">
+      {showSent ? <FormSent /> : null}
       <div className="form-lines"></div>
       <div className="form1">
         <div className="form1-text">
@@ -56,25 +135,41 @@ export default function Form() {
               <label>
                 <span>name</span>
               </label>
-              <input type="text" />
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div className="inp">
               <label>
                 <span>email</span>
               </label>
-              <input type="text" />
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className="inp">
               <label>
                 <span>mobile number</span>
               </label>
-              <input type="text" />
+              <input
+                type="text"
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
+              />
             </div>
             <div className="inp">
               <label>
                 <span>company name (optional)</span>
               </label>
-              <input type="text" />
+              <input
+                type="text"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+              />
             </div>
           </div>
           <div className="form-r">
@@ -82,16 +177,27 @@ export default function Form() {
               <label>
                 <span>subject</span>
               </label>
-              <input type="text" />
+              <input
+                type="text"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
             </div>
             <div className="inp">
               <label>
                 <span>question</span>
               </label>
-              <textarea />
+              <textarea
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+              />
             </div>
             <div className="inp inp-check">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={check}
+                onChange={(e) => setCheck(!check)}
+              />
               <div className="check-text">
                 I have read and understand
                 <br />
@@ -101,7 +207,7 @@ export default function Form() {
           </div>
         </div>
         <div className="sumbit-block">
-          <motion.button whileTap={tapOptions}>
+          <motion.button whileTap={tapOptions} onClick={submitForm}>
             <div className="form-btn">submit contact form</div>
           </motion.button>
         </div>
