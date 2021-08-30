@@ -21,6 +21,8 @@
 html,
 body {
   font-family: 'NexaBold';
+  width: 100vw;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -1098,6 +1100,7 @@ input[type='checkbox']:checked:after {
 
 ..mobile-btns button {
   margin-bottom: 20px;
+  background-color: white !important;
 }
 
 @media screen and (max-width: 1260px) {
@@ -1131,6 +1134,10 @@ input[type='checkbox']:checked:after {
   }
   .menuButton {
     display: block;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .menu {
     display: none;
@@ -1140,7 +1147,7 @@ input[type='checkbox']:checked:after {
     width: 100%;
     margin: 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row-reverse;
   }
 }
@@ -1193,7 +1200,7 @@ input[type='checkbox']:checked:after {
   .arrow-r {
     width: 50px;
   }
-  .form-r {
+  .form-r img {
     display: none;
   }
   .form1 {
@@ -1361,4 +1368,69 @@ input[type='checkbox']:checked:after {
     padding: 0px 0px;
     padding-bottom: initial;
   }
+
+  .showreel-block {
+    padding: 0px 5px;
+  }
+
+  .video,
+  video {
+    padding: 0px;
+  }
+
+  .form-l-r input[type='checkbox'] {
+    position: relative;
+    cursor: pointer;
+    padding: initial;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    margin-top: 16px;
+    top: 5px;
+    left: 5px;
+  }
+
+  input[type='checkbox']:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    top: -5px;
+    left: -5px;
+  }
+  input[type='checkbox']:checked:after {
+    content: '';
+    display: block;
+    height: 32px;
+    width: 22px;
+    border: solid #347958;
+    border-width: 0px 4px 4px 0;
+    transform: rotate(49deg);
+    position: absolute;
+    top: 0px;
+    left: 6px;
+  }
+  .check-text {
+    font-size: 18px;
+    margin-left: 60px;
+    margin-top: 16px;
+    padding-top: 25px;
+  }
+}
+
+input,
+textarea {
+  font-family: 'NexaBold' !important;
+}
+
+.med-text .animated {
+  height: 100%;
+  align-items: center;
+  display: flex;
 }

@@ -9,7 +9,19 @@ interface VideoProps {
 export default function BlockVideo({ videoSoundMuted }: VideoProps) {
   const refVideo = useRef(null);
 
+  // @ts-ignore: Object is possibly 'null'.
+  // const kek = document.getElementById('myVideo'); //.play();
+  // console.log({ kek });
+  // @ts-ignore: Object is possibly 'null'.
+  // refVideo.current.play();
+
   useEffect(() => {
+    // setTimeout(() => {
+    //   var video = document.getElementById('myVideo');
+    //   // @ts-ignore: Object is possibly 'null'.
+    //   video.muted = !video.muted;
+    // }, 3000);
+
     if (!refVideo.current) {
       return;
     }
@@ -29,9 +41,18 @@ export default function BlockVideo({ videoSoundMuted }: VideoProps) {
   return (
     <div className="block-video">
       <div className="video">
-        <video ref={refVideo} autoPlay loop muted id="myVideo">
+        <div
+          className="fullscreen-video-wrap"
+          dangerouslySetInnerHTML={{
+            __html: `
+            <video controls playsinline loop autoPlay muted autobuffer id="myVideo">
+              <source src="${backgroundVideo}" type="video/mp4" />
+            </video>`
+          }}
+        ></div>
+        {/* <video ref={refVideo} autoPlay controls muted loop id="myVideo">
           <source src={backgroundVideo} type="video/mp4" />
-        </video>
+        </video> */}
         <div className="round-block">
           <div className="main-text">
             <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={200}>

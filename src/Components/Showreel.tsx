@@ -92,8 +92,17 @@ export default function Showreel() {
     setCurrImg(images[index]);
   };
 
+  const AllImgs = () => (
+    <div>
+      {images.map((image) => (
+        <img src={image} style={{ display: 'none' }} />
+      ))}
+    </div>
+  );
+
   return (
     <div className="showreel">
+      <AllImgs />
       <div className="showreel-text">showreel</div>
       <div className="showreel-block">
         <div className="showreel-imgs">

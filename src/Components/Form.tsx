@@ -104,24 +104,24 @@ export default function Form() {
       </div>
       <div className="brand">
         <div className="brand-head">
-          <div className="brand-head-text">our branch</div>
+          <div className="brand-head-text">our office</div>
           <div className="brand-line"></div>
         </div>
         <div className="brand-ltd">
           <img src={ua} />
-          Mosqitter LTD
+          Mosquito Control Ltd.
         </div>
         <div className="brand-adress">
           Kyiv
           <br />
-          Horyva 5 str.
+          8 Moskovska str.
           <br />
           02000
         </div>
         <div className="brand-contacts">
-          +380937754433
+          +380963295768
           <br />
-          mosqitter@gmail.com
+          office@mosqitter.com
         </div>
       </div>
       <div className="form-block">
