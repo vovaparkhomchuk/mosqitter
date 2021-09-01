@@ -7,6 +7,7 @@ import { Animated } from 'react-animated-css';
 import { send } from 'emailjs-com';
 import ReactCircleModal from 'react-circle-modal';
 import { posix } from 'path';
+import FileSaver from 'file-saver';
 
 export default function Form() {
   const [showSent, setShowSent] = useState(false);
@@ -208,9 +209,22 @@ export default function Form() {
               <div className="check-text">
                 I have read and understand
                 <br />
-                the
-                {/* the Privacy Policy */}
-                <ReactCircleModal
+                the the
+                <button
+                  style={{
+                    background: 'none',
+                    textDecoration: 'underline'
+                  }}
+                  onClick={() => {
+                    FileSaver.saveAs(
+                      process.env.PUBLIC_URL + '/resource/Terms.docx',
+                      'Terms.docx'
+                    );
+                  }}
+                >
+                  Privacy Policy
+                </button>
+                {/* <ReactCircleModal
                   backgroundColor="#357857"
                   toogleComponent={(onClick) => (
                     <button
@@ -249,7 +263,7 @@ export default function Form() {
                       </p>
                     </div>
                   )}
-                </ReactCircleModal>
+                </ReactCircleModal> */}
               </div>
             </div>
           </div>
