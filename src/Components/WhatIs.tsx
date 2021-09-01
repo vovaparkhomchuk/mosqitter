@@ -70,7 +70,7 @@ export default function WhatIs() {
       </div>
       <div className="what-is3">
         <div className="med-text">
-          <ScrollAnimation animateIn="fadeIn" delay={1200} animateOnce={true}>
+          <ScrollAnimation animateIn="fadeIn" delay={300} animateOnce={true}>
             Long-term solution, designed to
             <br /> withstand severe weather conditions
           </ScrollAnimation>

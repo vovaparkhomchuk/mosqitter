@@ -37,7 +37,7 @@ export default function Cases() {
 
   return (
     <div className="cases">
-      <div className="showreel-text">cases</div>
+      <div className="showreel-text casess">mosqitter in media</div>
       <div className="cases-list">
         <div className="cases-item">
           <div className="cases-item-logo"></div>

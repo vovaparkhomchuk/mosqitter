@@ -36,6 +36,13 @@ export default function Header({
   };
 
   const callMenu = () => {
+    if (!showMenu) {
+      document.body.style.overflowY = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflowY = 'initial';
+      document.body.style.touchAction = 'initial';
+    }
     // if (!showMenu)
     setShowMenu(!showMenu);
     // else {
@@ -246,31 +253,33 @@ export default function Header({
       </div>
 
       <div className="menu-btns">
-        <motion.button
-          className="menuButton"
-          whileTap={tapOptions}
-          onClick={callMenu}
-        >
-          <img src={menuButton} />
-        </motion.button>
+        <div className="new-menu">
+          <motion.button
+            className="menuButton"
+            whileTap={tapOptions}
+            onClick={callMenu}
+          >
+            <img src={menuButton} />
+          </motion.button>
 
-        <motion.button
-          whileTap={tapOptions}
-          onClick={() => {
-            FileSaver.saveAs(
-              process.env.PUBLIC_URL + '/resource/Mosqitter_eng_.pdf',
-              'Mosqitter_Eng.pdf'
-            );
-          }}
-        >
-          download PDF<span className="pdf-remove">presentation</span>
-        </motion.button>
+          <motion.button
+            whileTap={tapOptions}
+            onClick={() => {
+              FileSaver.saveAs(
+                process.env.PUBLIC_URL + '/resource/Mosqitter_eng_.pdf',
+                'Mosqitter_Eng.pdf'
+              );
+            }}
+          >
+            download PDF<span className="pdf-remove">presentation</span>
+          </motion.button>
 
-        <motion.button whileTap={tapOptions}>
-          <Link to="brand-contacts" smooth={true}>
-            contact us
-          </Link>
-        </motion.button>
+          <motion.button whileTap={tapOptions}>
+            <Link to="brand-contacts" smooth={true}>
+              contact us
+            </Link>
+          </motion.button>
+        </div>
         <Link to="block-video" smooth={true}>
           <img src={logo} alt="Logo"></img>
         </Link>

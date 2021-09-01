@@ -22,8 +22,15 @@ html,
 body {
   font-family: 'NexaBold';
   width: 100vw;
-  overflow-x: hidden;
+  /* -webkit-overflow-scrolling: touch; */
 }
+body {
+  overflow-x: hidden;
+  /* -webkit-overflow-scrolling: touch; */
+  /* touch-action: none;
+  -ms-touch-action: none; */
+}
+
 a {
   text-decoration: none;
 }
@@ -131,6 +138,7 @@ input {
   width: 100vw;
   height: 200vh;
   background-color: #101010;
+  position: relative;
 }
 
 .video {
@@ -838,7 +846,7 @@ button.circle {
 }
 
 .brand-adress {
-  font-family: 'Nexa Light';
+  font-family: 'NexaLight';
 }
 
 .brand-contacts {
@@ -872,7 +880,7 @@ button.circle {
   color: white;
   font-size: 28px;
   border: none;
-  font-family: 'Nexa Bold';
+  font-family: 'NexaBold';
   border: solid 4px #347958;
 }
 
@@ -1066,7 +1074,7 @@ input[type='checkbox']:checked:after {
 }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   display: block;
@@ -1078,12 +1086,16 @@ input[type='checkbox']:checked:after {
   z-index: 20;
   background-color: #27513d;
   left: 0px;
+  z-index: 100;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu button {
-  color: black;
+  color: white;
   font-size: 6vw;
   margin-bottom: 10px;
+  background: none;
+  margin-bottom: 5vh;
 }
 
 .menu-close {
@@ -1170,6 +1182,11 @@ input[type='checkbox']:checked:after {
   .menu-btns button:nth-child(n) {
     margin: 0px;
   }
+
+  .new-menu button:nth-child(2),
+  .new-menu button:nth-child(3) {
+    margin-right: 20px !important;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -1240,7 +1257,12 @@ input[type='checkbox']:checked:after {
   }
 
   .showreel-text {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
+    padding-top: 30px;
+  }
+
+  .showreel-block {
+    margin-top: 20px;
   }
 
   .gradient-text,
@@ -1289,6 +1311,8 @@ input[type='checkbox']:checked:after {
     box-sizing: border-box;
     padding-top: 0px 15px;
     padding-top: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .clients-imgs div {
     width: 45%;
@@ -1422,6 +1446,53 @@ input[type='checkbox']:checked:after {
     margin-top: 16px;
     padding-top: 25px;
   }
+
+  .main-text-left {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .feature:nth-child(3) {
+    margin-bottom: 0px;
+  }
+
+  .clients-text {
+    margin-bottom: initial;
+  }
+  .clients-imgs img {
+    width: 70%;
+  }
+
+  .casess {
+    margin-bottom: 20px;
+  }
+
+  .showreel-block {
+    margin-bottom: initial;
+  }
+
+  .form-sent {
+    width: calc(100% - 30px);
+    left: 15px;
+    right: 15px;
+  }
+
+  .mobile-menu button {
+    font-size: 8vw;
+  }
+
+  .new-menu button:nth-child(2),
+  .new-menu button:nth-child(3) {
+    height: 47px;
+    width: 24vw;
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .menu-btns img {
+    width: 20vw;
+  }
 }
 
 input,
@@ -1433,4 +1504,32 @@ textarea {
   height: 100%;
   align-items: center;
   display: flex;
+}
+
+.what-is {
+  position: relative;
+  z-index: 1;
+}
+
+/* .fullscreen-video-wrap {
+  position: absolute;
+}
+
+video {
+  position: fixed;
+} */
+
+.new-menu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.help {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
