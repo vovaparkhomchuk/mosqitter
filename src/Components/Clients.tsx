@@ -2,7 +2,7 @@ import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import client1 from '../Images/Flag_of_Ukraine.png';
 import client2 from '../Images/Flag_of_Italy.png';
-import client3 from '../Images/Flag_of_India.png';
+import client3 from '../Images/india.jpg';
 import client4 from '../Images/Flag_of_Canada_(Pantone).png';
 
 export default function Clients() {

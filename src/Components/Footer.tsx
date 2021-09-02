@@ -4,6 +4,7 @@ import ios from '../Images/ios.png';
 import android from '../Images/android.png';
 import inn from '../Images/in.png';
 import fb from '../Images/fb.png';
+import FileSaver from 'file-saver';
 
 export default function Footer() {
   return (
@@ -32,7 +33,17 @@ export default function Footer() {
         <Link to="brand-contacts" smooth={true}>
           <div className="column-item">contact us</div>
         </Link>
-        <div className="column-item">download pdf presentation</div>
+        <div
+          className="column-item"
+          onClick={() => {
+            FileSaver.saveAs(
+              process.env.PUBLIC_URL + '/resource/mosqittereng_new.pdf',
+              'Mosqitter_Eng.pdf'
+            );
+          }}
+        >
+          download pdf presentation
+        </div>
       </div>
 
       <div className="footer-column">
