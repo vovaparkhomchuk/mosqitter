@@ -19,7 +19,6 @@ export default function Header({
   setVideoSoundMuted
 }: HeaderProps) {
   const location = useLocation();
-  console.log({ location });
   const [actives, setActives] = useState(['menu-active', '', '', '', '']);
   const [showMenu, setShowMenu] = useState(false);
   const [menuAnim, setMenuAnim] = useState(false);
@@ -31,6 +30,8 @@ export default function Header({
   const hoverOptions = {
     scale: 1.05
   };
+
+  useEffect(() => window.scrollTo(0, 0), [location]);
 
   const headerMenuClick = (id: number) => {
     let newActives = ['', '', '', '', ''];
