@@ -1115,6 +1115,65 @@ input[type='checkbox']:checked:after {
   background-color: white !important;
 }
 
+.policies {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #101010;
+  position: relative;
+  background: rgb(16, 16, 16);
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 16, 1) 0%,
+    rgba(52, 121, 88, 1) 100%
+  );
+  box-sizing: border-box;
+  padding-top: 135px;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.headerr {
+  font-size: 60px;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+
+.med-header {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.small-header {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.simple-text {
+  font-size: 18px;
+  margin-bottom: 24px;
+  font-family: 'NexaLight';
+}
+
+.hrr {
+  text-decoration: none;
+  color: white;
+}
+
+.back-btn {
+  background-color: white;
+  border-radius: 4px;
+  padding: 6px 14px;
+  padding-top: 9px;
+  display: block;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  width: 66px;
+}
+
 @media screen and (max-width: 1260px) {
   .mobile-menu {
     display: flex;

@@ -10,27 +10,42 @@ import Showreel from './Components/Showreel';
 import Cases from './Components/Cases';
 import Form from './Components/Form';
 import Footer from './Components/Footer';
+import PrivacyPolicy from './Components/PrivacyPolicy';
+import Terms from './Components/Terms';
 import { motion, useElementScroll } from 'framer-motion';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
   const [videoSoundMuted, setVideoSoundMuted] = useState(false);
 
   return (
-    <div className="App">
-      <Header
-        videoSoundMuted={videoSoundMuted}
-        setVideoSoundMuted={setVideoSoundMuted}
-      />
-      <BlockVideo videoSoundMuted={videoSoundMuted} />
-      <WhatIs />
-      <Usage />
-      <Mission />
-      <Clients />
-      <Showreel />
-      <Cases />
-      <Form />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header
+          videoSoundMuted={videoSoundMuted}
+          setVideoSoundMuted={setVideoSoundMuted}
+        />
+        <Switch>
+          <Route path="/privacy-policy">
+            <PrivacyPolicy />
+          </Route>
+          <Route path="/terms-and-conditions">
+            <Terms />
+          </Route>
+          <Route path="/">
+            <BlockVideo videoSoundMuted={videoSoundMuted} />
+            <WhatIs />
+            <Usage />
+            <Mission />
+            <Clients />
+            <Showreel />
+            <Cases />
+            <Form />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

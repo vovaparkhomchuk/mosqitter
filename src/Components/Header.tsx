@@ -6,6 +6,8 @@ import { Link } from 'react-scroll';
 import { Animated } from 'react-animated-css';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import FileSaver from 'file-saver';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 interface HeaderProps {
   videoSoundMuted: boolean;
@@ -16,6 +18,8 @@ export default function Header({
   videoSoundMuted,
   setVideoSoundMuted
 }: HeaderProps) {
+  const location = useLocation();
+  console.log({ location });
   const [actives, setActives] = useState(['menu-active', '', '', '', '']);
   const [showMenu, setShowMenu] = useState(false);
   const [menuAnim, setMenuAnim] = useState(false);
@@ -129,69 +133,79 @@ export default function Header({
 
       <div className="mobile-btns">
         <Link to="what-is" smooth={true}>
-          <motion.button
-            onClick={() => {
-              headerMenuClick(0);
-              callMenu();
-            }}
-            className={actives[0]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            what is mosqitter?
-          </motion.button>
+          <RouterLink to="/">
+            <motion.button
+              onClick={() => {
+                headerMenuClick(0);
+                callMenu();
+              }}
+              className={actives[0]}
+              whileTap={tapOptions}
+              whileHover={hoverOptions}
+            >
+              what is mosqitter?
+            </motion.button>
+          </RouterLink>
         </Link>
         <Link to="usage" smooth={true}>
-          <motion.button
-            onClick={() => {
-              headerMenuClick(1);
-              callMenu();
-            }}
-            className={actives[1]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            usage
-          </motion.button>
+          <RouterLink to="/">
+            <motion.button
+              onClick={() => {
+                headerMenuClick(1);
+                callMenu();
+              }}
+              className={actives[1]}
+              whileTap={tapOptions}
+              whileHover={hoverOptions}
+            >
+              usage
+            </motion.button>
+          </RouterLink>
         </Link>
         <Link to="mission" smooth={true}>
-          <motion.button
-            onClick={() => {
-              headerMenuClick(2);
-              callMenu();
-            }}
-            className={actives[2]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            mission
-          </motion.button>
+          <RouterLink to="/">
+            <motion.button
+              onClick={() => {
+                headerMenuClick(2);
+                callMenu();
+              }}
+              className={actives[2]}
+              whileTap={tapOptions}
+              whileHover={hoverOptions}
+            >
+              mission
+            </motion.button>
+          </RouterLink>
         </Link>
         <Link to="clients" smooth={true}>
-          <motion.button
-            onClick={() => {
-              headerMenuClick(3);
-              callMenu();
-            }}
-            className={actives[3]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            clients
-          </motion.button>
+          <RouterLink to="/">
+            <motion.button
+              onClick={() => {
+                headerMenuClick(3);
+                callMenu();
+              }}
+              className={actives[3]}
+              whileTap={tapOptions}
+              whileHover={hoverOptions}
+            >
+              clients
+            </motion.button>
+          </RouterLink>
         </Link>
         <Link to="cases" smooth={true}>
-          <motion.button
-            onClick={() => {
-              headerMenuClick(4);
-              callMenu();
-            }}
-            className={actives[4]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            cases
-          </motion.button>
+          <RouterLink to="/">
+            <motion.button
+              onClick={() => {
+                headerMenuClick(4);
+                callMenu();
+              }}
+              className={actives[4]}
+              whileTap={tapOptions}
+              whileHover={hoverOptions}
+            >
+              cases
+            </motion.button>
+          </RouterLink>
         </Link>
       </div>
     </Animated>
@@ -200,56 +214,75 @@ export default function Header({
   return (
     <div className="header">
       <div className="menu">
-        <Link to="what-is" smooth={true}>
-          <motion.button
-            // onClick={() => headerMenuClick(0)}
-            className={actives[0]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            what is mosqitter?
-          </motion.button>
-        </Link>
-        <Link to="usage" smooth={true}>
-          <motion.button
-            // onClick={() => headerMenuClick(1)}
-            className={actives[1]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            usage
-          </motion.button>
-        </Link>
-        <Link to="mission" smooth={true}>
-          <motion.button
-            // onClick={() => headerMenuClick(2)}
-            className={actives[2]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            mission
-          </motion.button>
-        </Link>
-        <Link to="clients" smooth={true}>
-          <motion.button
-            // onClick={() => headerMenuClick(3)}
-            className={actives[3]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            clients
-          </motion.button>
-        </Link>
-        <Link to="cases" smooth={true}>
-          <motion.button
-            // onClick={() => headerMenuClick(4)}
-            className={actives[4]}
-            whileTap={tapOptions}
-            whileHover={hoverOptions}
-          >
-            cases
-          </motion.button>
-        </Link>
+        {location.pathname === '/' ? (
+          <>
+            <Link to="what-is" smooth={true}>
+              <RouterLink to="/">
+                <motion.button
+                  // onClick={() => headerMenuClick(0)}
+                  className={actives[0]}
+                  whileTap={tapOptions}
+                  whileHover={hoverOptions}
+                >
+                  what is mosqitter?
+                </motion.button>
+              </RouterLink>
+            </Link>
+            <Link to="usage" smooth={true}>
+              <RouterLink to="/">
+                <motion.button
+                  // onClick={() => headerMenuClick(1)}
+                  className={actives[1]}
+                  whileTap={tapOptions}
+                  whileHover={hoverOptions}
+                >
+                  usage
+                </motion.button>
+              </RouterLink>
+            </Link>
+            <Link to="mission" smooth={true}>
+              <RouterLink to="/">
+                <motion.button
+                  // onClick={() => headerMenuClick(2)}
+                  className={actives[2]}
+                  whileTap={tapOptions}
+                  whileHover={hoverOptions}
+                >
+                  mission
+                </motion.button>
+              </RouterLink>
+            </Link>
+            <Link to="clients" smooth={true}>
+              <RouterLink to="/">
+                <motion.button
+                  // onClick={() => headerMenuClick(3)}
+                  className={actives[3]}
+                  whileTap={tapOptions}
+                  whileHover={hoverOptions}
+                >
+                  clients
+                </motion.button>
+              </RouterLink>
+            </Link>
+            <Link to="cases" smooth={true}>
+              <RouterLink to="/">
+                <motion.button
+                  // onClick={() => headerMenuClick(4)}
+                  className={actives[4]}
+                  whileTap={tapOptions}
+                  whileHover={hoverOptions}
+                >
+                  cases
+                </motion.button>
+              </RouterLink>
+            </Link>
+          </>
+        ) : (
+          <RouterLink to="/" className="back-btn">
+            <FaArrowLeft />
+            Back
+          </RouterLink>
+        )}
       </div>
 
       <div className="menu-btns">
@@ -281,7 +314,9 @@ export default function Header({
           </motion.button>
         </div>
         <Link to="block-video" smooth={true}>
-          <img src={logo} alt="Logo"></img>
+          <RouterLink to="/">
+            <img src={logo} alt="Logo"></img>
+          </RouterLink>
         </Link>
       </div>
       {showMenu ? <MobileMenu /> : null}

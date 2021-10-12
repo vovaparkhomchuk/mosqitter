@@ -5,6 +5,7 @@ import android from '../Images/android.png';
 import inn from '../Images/in.png';
 import fb from '../Images/fb.png';
 import FileSaver from 'file-saver';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -44,6 +45,12 @@ export default function Footer() {
         >
           download pdf presentation
         </div>
+        <RouterLink to="/privacy-policy" className="hrr">
+          <div className="column-item">privacy policy</div>
+        </RouterLink>
+        <RouterLink to="/terms-and-conditions" className="hrr">
+          <div className="column-item">terms and conditions</div>
+        </RouterLink>
       </div>
 
       <div className="footer-column">
