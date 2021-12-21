@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
             <div className="app-r">
               <div className="app-r1">In progress</div>
-              <div className="app-r2">IOS app</div>
+              <div className="app-r2">iOS app</div>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Footer() {
             </div>
             <div className="app-r">
               <div className="app-r1">In progress</div>
-              <div className="app-r2">IOS app</div>
+              <div className="app-r2">Android app</div>
             </div>
           </div>
         </div>
