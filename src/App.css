@@ -609,6 +609,26 @@ button.circle {
 .cases-item:nth-child(10) .cases-item-logo {
   background-image: url('./Images/cases/case10.png');
 }
+.cases-item:nth-child(11) .cases-item-logo {
+  background-image: url('./Images/cases/case11.png');
+}
+.cases-item:nth-child(12) .cases-item-logo {
+  background-image: url('./Images/cases/case12.svg');
+}
+.cases-item:nth-child(13) .cases-item-logo {
+  background-image: url('./Images/cases/case13.png');
+}
+.cases-item:nth-child(14) .cases-item-logo {
+  background-image: url('./Images/cases/case14.webp');
+}
+.cases-item:nth-child(11) .cases-item-logo,
+.cases-item:nth-child(12) .cases-item-logo,
+.cases-item:nth-child(13) .cases-item-logo,
+.cases-item:nth-child(14) .cases-item-logo
+{
+  background-position: center;
+  background-size: contain;
+}
 
 .gradient-block {
   width: 100%;
@@ -693,7 +713,7 @@ button.circle {
 .cases-item:nth-child(4) {
   background-color: #dfbf17;
 }
-.cases-item:nth-child(5) {
+.cases-item:nth-child(5), .cases-item:nth-child(14) {
   background-color: #e37623;
   font-family: 'Montserrat', sans-serif;
   line-height: 27px;
@@ -716,6 +736,19 @@ button.circle {
 }
 .cases-item:nth-child(10) {
   background-color: #26abe2;
+}
+
+.cases-item:nth-child(11) {
+  background-color: #0a9700;
+}
+.cases-item:nth-child(12) {
+  background-color: #56c6fa;
+}
+.cases-item:nth-child(13) {
+  background-color: #403a37;
+}
+.cases-item:nth-child(14) {
+  background-color: #951415;
 }
 
 .form {
@@ -1368,7 +1401,6 @@ input[type='checkbox']:checked:after {
   .clients-imgs {
     width: 100%;
     box-sizing: border-box;
-    padding-top: 0px 15px;
     padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
