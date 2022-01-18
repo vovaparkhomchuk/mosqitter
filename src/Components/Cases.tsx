@@ -270,6 +270,22 @@ export default function Cases() {
           </div>
         </div>
 
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                УКРАЇНСЬКИЙ СТАРТАП MOSQITTER ВИХОДИТЬ НА РИНОК ІНДІЇ
+              </div>
+              <div className="gradient-date">Dec 14, 2021</div>
+              <a href={link15} className="gradient-link">
+                <img src={link} />
+                {link15}
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -621,6 +621,9 @@ button.circle {
 .cases-item:nth-child(14) .cases-item-logo {
   background-image: url('./Images/cases/case14.webp');
 }
+.cases-item:nth-child(15) .cases-item-logo {
+  background-image: url('./Images/cases/case15.svg');
+}
 .cases-item:nth-child(11) .cases-item-logo,
 .cases-item:nth-child(12) .cases-item-logo,
 .cases-item:nth-child(13) .cases-item-logo,
@@ -713,7 +716,9 @@ button.circle {
 .cases-item:nth-child(4) {
   background-color: #dfbf17;
 }
-.cases-item:nth-child(5), .cases-item:nth-child(14) {
+.cases-item:nth-child(5),
+.cases-item:nth-child(14),
+.cases-item:nth-child(15){
   background-color: #e37623;
   font-family: 'Montserrat', sans-serif;
   line-height: 27px;
@@ -750,6 +755,10 @@ button.circle {
 .cases-item:nth-child(14) {
   background-color: #951415;
 }
+.cases-item:nth-child(15) {
+  background-color: #cbb222;
+}
+
 
 .form {
   width: 100%;
