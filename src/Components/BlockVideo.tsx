@@ -56,7 +56,7 @@ export default function BlockVideo({ videoSoundMuted }: VideoProps) {
         <div className="round-block">
           <div className="main-text">
             <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={200}>
-              Creating mosquito-free zone for comfort and safety
+              Enjoy the outdoors
             </ScrollAnimation>
           </div>
           <div className="small-text">

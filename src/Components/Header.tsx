@@ -305,7 +305,7 @@ export default function Header({
               );
             }}
           >
-            download PDF<span className="pdf-remove">presentation</span>
+            download PDF <span className="pdf-remove">presentation</span>
           </motion.button>
 
           <motion.button whileTap={tapOptions}>

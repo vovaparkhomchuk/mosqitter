@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="column-item">usage</div>
         </Link>
         <Link to="mission" smooth={true}>
-          <div className="column-item">misson</div>
+          <div className="column-item">mission</div>
         </Link>
         <Link to="clients" smooth={true}>
           <div className="column-item">clients</div>
