@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../Images/logo.png';
+// import logo from '../Images/logo.png';
+import logo from '../Images/logoUa.png';
 import menuButton from '../Images/menuButton.png';
 import { motion, useElementScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
@@ -310,13 +311,13 @@ export default function Header({
 
           <motion.button whileTap={tapOptions}>
             <Link to="brand-contacts" smooth={true}>
-              contact us
+              get quote
             </Link>
           </motion.button>
         </div>
         <Link to="block-video" smooth={true}>
           <RouterLink to="/">
-            <img src={logo} alt="Logo"></img>
+            <img width={110} src={logo} alt="Logo"></img>
           </RouterLink>
         </Link>
       </div>

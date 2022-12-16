@@ -94,8 +94,8 @@ export default function Showreel() {
 
   const AllImgs = () => (
     <div>
-      {images.map((image) => (
-        <img src={image} style={{ display: 'none' }} />
+      {images.map((image, idx) => (
+        <img key={idx} src={image} style={{ display: 'none' }} />
       ))}
     </div>
   );
@@ -129,6 +129,7 @@ export default function Showreel() {
                 if (index === imgInd)
                   return (
                     <motion.button
+                      key={index}
                       onClick={() => changeImgById(index)}
                       className="circle"
                       style={{ opacity: 1 }}
@@ -139,6 +140,7 @@ export default function Showreel() {
                 else
                   return (
                     <motion.button
+                      key={index}
                       onClick={() => changeImgById(index)}
                       className="circle"
                       whileTap={tapOptions}

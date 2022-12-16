@@ -120,14 +120,22 @@ export default function Form() {
           Mosquito Control Ltd.
         </div>
         <div className="brand-adress">
-          Kyiv
+          The East Stroudsburg University Innovation Center.
           <br />
+          562 Independence Rd,
+          <br />
+          East Stroudsburg,
+          <br />
+          PA 18301,
+          <br />
+          United States
+          {/* <br />
           8 Moskovska str.
           <br />
-          02000
+          02000 */}
         </div>
         <div className="brand-contacts">
-          +380963295768
+          +1 (272) 634-8778
           <br />
           office@mosqitter.com
         </div>

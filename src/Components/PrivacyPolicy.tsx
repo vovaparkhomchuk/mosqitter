@@ -204,8 +204,10 @@ const info = [
 export default function PrivacyPolicy() {
   return (
     <div className="policies">
-      {info.map((el) => (
-        <div className={el.style}>{parse(el.text)}</div>
+      {info.map((el, idx) => (
+        <div key={idx} className={el.style}>
+          {parse(el.text)}
+        </div>
       ))}
     </div>
   );

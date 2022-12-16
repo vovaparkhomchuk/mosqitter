@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import BlockVideo from './Components/BlockVideo';
@@ -12,6 +12,7 @@ import Form from './Components/Form';
 import Footer from './Components/Footer';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 import Terms from './Components/Terms';
+import { StartupInfo } from './Components/StartupInfo';
 import { motion, useElementScroll } from 'framer-motion';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -33,6 +34,7 @@ function App() {
             <Terms />
           </Route>
           <Route path="/">
+            <StartupInfo />
             <BlockVideo videoSoundMuted={videoSoundMuted} />
             <WhatIs />
             <Usage />

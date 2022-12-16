@@ -16,9 +16,9 @@ export default function Clients() {
         <div>
           <img src={client1} />
         </div>
-        <div>
+        {/* <div>
           <img src={client2} />
-        </div>
+        </div> */}
         <div>
           <img src={client3} />
         </div>
