@@ -4,6 +4,8 @@ import client1 from '../Images/Flag_of_Ukraine.png';
 import client2 from '../Images/Flag_of_Italy.png';
 import client3 from '../Images/india.jpg';
 import client4 from '../Images/Flag_of_Canada_(Pantone).png';
+import client5 from '../Images/Flag_of_USA.png';
+import client6 from '../Images/Flag_of_Brazil.png';
 
 export default function Clients() {
   return (
@@ -11,7 +13,6 @@ export default function Clients() {
       <div className="clients-text">
         Our clients already use benefits of Mosqitter
       </div>
-
       <div className="clients-imgs">
         <div>
           <img src={client1} />
@@ -23,8 +24,11 @@ export default function Clients() {
           <img src={client3} />
         </div>
         <div>
-          <img src={client4} />
+          <img src={client5} />
         </div>
+          <div>
+              <img src={client6} />
+          </div>
       </div>
     </div>
   );

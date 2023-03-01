@@ -423,8 +423,31 @@ video {
   margin-bottom: 40px;
 }
 
+.usa-logo {
+  width: 34px;
+  height: 22px;
+}
+
+.qr-image {
+  width: 180px;
+  height: 180px;
+}
+
+.is--flex {
+  display: flex;
+}
+
+.is--margin-right {
+  margin-right: 50px;
+}
+
+.column-item-app {
+  margin-bottom: 15px;
+}
+
 .clients-imgs img {
   width: 80%;
+  height: 120px;
 }
 
 .animated {
@@ -1409,6 +1432,8 @@ input[type='checkbox']:checked:after {
     width: 45%;
   }
 
+  .is--flex {display: block}
+
   .footer {
     flex-direction: column;
   }
@@ -1550,6 +1575,11 @@ input[type='checkbox']:checked:after {
     padding: 0px 5px;
     padding-top: 15px;
     padding-bottom: 12px;
+  }
+
+  .column-item {
+    margin-bottom: 30px;
+    cursor: pointer;
   }
 
   .arrow-l,

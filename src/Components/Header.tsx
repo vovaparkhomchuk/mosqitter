@@ -301,8 +301,11 @@ export default function Header({
             whileTap={tapOptions}
             onClick={() => {
               FileSaver.saveAs(
-                process.env.PUBLIC_URL + '/resource/mosqittereng_new.pdf',
-                'Mosqitter_Eng.pdf'
+                  'https://drive.google.com/file/d/1M8BF4crcm_brFbidV43FCOGbSxTAii5r/view',
+                'Buklet_eco_green.pdf'
+                // process.env.PUBLIC_URL + '/resource/mosqittereng_new.pdf',
+                // 'Mosqitter_Eng.pdf'
+                    //https://drive.google.com/file/d/1M8BF4crcm_brFbidV43FCOGbSxTAii5r/view
               );
             }}
           >
@@ -311,7 +314,7 @@ export default function Header({
 
           <motion.button whileTap={tapOptions}>
             <Link to="brand-contacts" smooth={true}>
-              get quote
+              get a quote
             </Link>
           </motion.button>
         </div>

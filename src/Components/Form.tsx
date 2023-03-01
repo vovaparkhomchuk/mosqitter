@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import pic from '../Images/pic.png';
 import ua from '../Images/ua-logo.png';
+import usa from '../Images/Flag_of_USA.png'
 import { motion } from 'framer-motion';
 import formSent from '../Images/formSent.png';
 import { Animated } from 'react-animated-css';
@@ -116,7 +117,7 @@ export default function Form() {
           <div className="brand-line"></div>
         </div>
         <div className="brand-ltd">
-          <img src={ua} />
+          <img src={usa} className="usa-logo" />
           Mosquito Control Ltd.
         </div>
         <div className="brand-adress">
@@ -138,6 +139,26 @@ export default function Form() {
           +1 (272) 634-8778
           <br />
           office@mosqitter.com
+        </div>
+        <div className="brand-ltd">
+          <img src={ua} />
+          Mosquito Control Ltd.
+        </div>
+        <div className="brand-adress">
+          13 Kharkivske shosse
+          <br />
+          str. Poltava,
+          <br />
+          36008,
+          <br />
+          Ukraine
+          {/* <br />
+          8 Moskovska str.
+          <br />
+          02000 */}
+        </div>
+        <div className="brand-contacts">
+          +380 96 329 5768
         </div>
       </div>
       <div className="form-block">

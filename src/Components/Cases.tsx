@@ -53,6 +53,103 @@ export default function Cases() {
         <div className="cases-item">
           <div className="cases-item-logo"></div>
           <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                Meet IT Arena 2020 Startup Competition Semi-Finalists
+              </div>
+              <div className="gradient-date">Sep 28, 2020</div>
+              <a href={link10} className="gradient-link">
+                <img src={link} />
+                {link10}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                Mosqitter’s machine murders mosquitos with much mirth
+              </div>
+              <div className="gradient-date">Jan 6, 2022</div>
+              <a href={link11} className="gradient-link">
+                <img src={link} />
+                {link11}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                CES 2022 EDITORS' CHOICE AWARDS: OUR TOP PICKS FROM THE SHOW
+              </div>
+              <div className="gradient-date">Jan 7, 2022</div>
+              <a href={link12} className="gradient-link">
+                <img src={link} />
+                {link12}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                WINNER:<br />
+                Mosquito Control Ltd.
+              </div>
+              <div className="gradient-date">
+                {/*Sep 28, 2020*/}
+              </div>
+              <a href={link13} className="gradient-link">
+                <img src={link} />
+                {link13}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                100 найпомітніших малих підприємців
+              </div>
+              <div className="gradient-date">Dec 21, 2021</div>
+              <a href={link14} className="gradient-link">
+                <img src={link} />
+                {link14}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
+            <div className="gradient-dark">
+              <div className="gradient-text">
+                УКРАЇНСЬКИЙ СТАРТАП MOSQITTER ВИХОДИТЬ НА РИНОК ІНДІЇ
+              </div>
+              <div className="gradient-date">Dec 14, 2021</div>
+              <a href={link15} className="gradient-link">
+                <img src={link} />
+                {link15}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="cases-item">
+          <div className="cases-item-logo"></div>
+          <div className="gradient-block">
             <div className="gradient">
               <div className="gradient-text">
                 CRDF Global Supports Innovative and Female-Led Entrepreneurship
@@ -187,105 +284,6 @@ export default function Cases() {
             </div>
           </div>
         </div>
-        <div className="cases-item">
-          <div className="cases-item-logo"></div>
-          <div className="gradient-block">
-            <div className="gradient-dark">
-              <div className="gradient-text">
-                Meet IT Arena 2020 Startup Competition Semi-Finalists
-              </div>
-              <div className="gradient-date">Sep 28, 2020</div>
-              <a href={link10} className="gradient-link">
-                <img src={link} />
-                {link10}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="cases-item">
-          <div className="cases-item-logo"></div>
-          <div className="gradient-block">
-            <div className="gradient-dark">
-              <div className="gradient-text">
-                Mosqitter’s machine murders mosquitos with much mirth
-              </div>
-              <div className="gradient-date">Jan 6, 2022</div>
-              <a href={link11} className="gradient-link">
-                <img src={link} />
-                {link11}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="cases-item">
-          <div className="cases-item-logo"></div>
-          <div className="gradient-block">
-            <div className="gradient-dark">
-              <div className="gradient-text">
-                CES 2022 EDITORS' CHOICE AWARDS: OUR TOP PICKS FROM THE SHOW
-              </div>
-              <div className="gradient-date">Jan 7, 2022</div>
-              <a href={link12} className="gradient-link">
-                <img src={link} />
-                {link12}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="cases-item">
-          <div className="cases-item-logo"></div>
-          <div className="gradient-block">
-            <div className="gradient-dark">
-              <div className="gradient-text">
-                WINNER:<br />
-                Mosquito Control Ltd.
-              </div>
-              <div className="gradient-date">
-                {/*Sep 28, 2020*/}
-              </div>
-              <a href={link13} className="gradient-link">
-                <img src={link} />
-                {link13}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="cases-item">
-          <div className="cases-item-logo"></div>
-          <div className="gradient-block">
-            <div className="gradient-dark">
-              <div className="gradient-text">
-                100 найпомітніших малих підприємців
-              </div>
-              <div className="gradient-date">Dec 21, 2021</div>
-              <a href={link14} className="gradient-link">
-                <img src={link} />
-                {link14}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="cases-item">
-          <div className="cases-item-logo"></div>
-          <div className="gradient-block">
-            <div className="gradient-dark">
-              <div className="gradient-text">
-                УКРАЇНСЬКИЙ СТАРТАП MOSQITTER ВИХОДИТЬ НА РИНОК ІНДІЇ
-              </div>
-              <div className="gradient-date">Dec 14, 2021</div>
-              <a href={link15} className="gradient-link">
-                <img src={link} />
-                {link15}
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   );

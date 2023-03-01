@@ -4,6 +4,8 @@ import ios from '../Images/ios.png';
 import android from '../Images/android.png';
 import inn from '../Images/in.png';
 import fb from '../Images/fb.png';
+import appstoreQR from '../Images/appstore_qr.png';
+import playstoreQR from '../Images/playstore_qr.png';
 import FileSaver from 'file-saver';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -55,27 +57,35 @@ export default function Footer() {
 
       <div className="footer-column">
         <div className="column-name">Apps</div>
-        <div className="column-item">
-          <div className="column-item-app">
-            <div className="app-l">
-              <img src={ios} />
+        <div className="column-item-wrapper is--flex">
+        <div className="column-item is--margin-right">
+          <a href="https://apps.apple.com/us/app/mosqitter/id1591375037">
+            <div className="column-item-app">
+              <div className="app-l">
+                <img src={ios} />
+              </div>
+              <div className="app-r">
+                <div className="app-r1">Download</div>
+                <div className="app-r2">iOS app</div>
+              </div>
             </div>
-            <div className="app-r">
-              <div className="app-r1">In progress</div>
-              <div className="app-r2">iOS app</div>
-            </div>
-          </div>
+          </a>
+          <img src={appstoreQR} className="qr-image" alt=""/>
         </div>
         <div className="column-item">
-          <div className="column-item-app">
-            <div className="app-l">
-              <img src={android} />
+          <a href="https://play.google.com/store/apps/details?id=com.mosqitter&pli=1">
+            <div className="column-item-app">
+              <div className="app-l">
+                <img src={android} />
+              </div>
+              <div className="app-r">
+                <div className="app-r1">Download</div>
+                <div className="app-r2">Android app</div>
+              </div>
             </div>
-            <div className="app-r">
-              <div className="app-r1">In progress</div>
-              <div className="app-r2">Android app</div>
-            </div>
-          </div>
+          </a>
+          <img src={playstoreQR} className="qr-image" alt=""/>
+        </div>
         </div>
       </div>
       <div className="footer-column">
