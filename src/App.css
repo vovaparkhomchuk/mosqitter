@@ -1513,6 +1513,7 @@ input[type='checkbox']:checked:after {
     padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
+    display: flow-root;
   }
   .clients-imgs div {
     width: 45%;
@@ -1665,7 +1666,8 @@ input[type='checkbox']:checked:after {
     margin-bottom: initial;
   }
   .clients-imgs img {
-    width: 70%;
+    width: 45%;
+    height: 60px;
   }
 
   .casess {
