@@ -598,54 +598,55 @@ button.circle {
   background-color: white;
   margin-left: 25px;
   margin-top: 25px;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .cases-item:nth-child(1) .cases-item-logo {
-  background-image: url('./Images/cases/case1.png');
-}
-.cases-item:nth-child(2) .cases-item-logo {
-  background-image: url('./Images/cases/case2.png');
-}
-.cases-item:nth-child(3) .cases-item-logo {
-  background-image: url('./Images/cases/case3.png');
-}
-.cases-item:nth-child(4) .cases-item-logo {
-  background-image: url('./Images/cases/case4.png');
-}
-.cases-item:nth-child(5) .cases-item-logo {
-  background-image: url('./Images/cases/case5.png');
-}
-.cases-item:nth-child(6) .cases-item-logo {
-  background-image: url('./Images/cases/case6.png');
-}
-.cases-item:nth-child(7) .cases-item-logo {
-  background-image: url('./Images/cases/case7.png');
-}
-.cases-item:nth-child(8) .cases-item-logo {
-  background-image: url('./Images/cases/case8.png');
-}
-.cases-item:nth-child(9) .cases-item-logo {
-  background-image: url('./Images/cases/case9.png');
-}
-.cases-item:nth-child(10) .cases-item-logo {
   background-image: url('./Images/cases/case10.png');
 }
-.cases-item:nth-child(11) .cases-item-logo {
+.cases-item:nth-child(2) .cases-item-logo {
   background-image: url('./Images/cases/case11.png');
 }
-.cases-item:nth-child(12) .cases-item-logo {
+.cases-item:nth-child(3) .cases-item-logo {
   background-image: url('./Images/cases/case12.svg');
 }
-.cases-item:nth-child(13) .cases-item-logo {
+.cases-item:nth-child(4) .cases-item-logo {
   background-image: url('./Images/cases/case13.png');
 }
-.cases-item:nth-child(14) .cases-item-logo {
+.cases-item:nth-child(5) .cases-item-logo {
   background-image: url('./Images/cases/case14.webp');
 }
-.cases-item:nth-child(15) .cases-item-logo {
+.cases-item:nth-child(6) .cases-item-logo {
   background-image: url('./Images/cases/case15.svg');
+}
+.cases-item:nth-child(7) .cases-item-logo {
+  background-image: url('./Images/cases/case1.png');
+}
+.cases-item:nth-child(8) .cases-item-logo {
+  background-image: url('./Images/cases/case2.png');
+}
+.cases-item:nth-child(9) .cases-item-logo {
+  background-image: url('./Images/cases/case3.png');
+}
+.cases-item:nth-child(10) .cases-item-logo {
+  background-image: url('./Images/cases/case4.png');
+}
+.cases-item:nth-child(11) .cases-item-logo {
+  background-image: url('./Images/cases/case5.png');
+}
+.cases-item:nth-child(12) .cases-item-logo {
+  background-image: url('./Images/cases/case6.png');
+}
+.cases-item:nth-child(13) .cases-item-logo {
+  background-image: url('./Images/cases/case7.png');
+}
+.cases-item:nth-child(14) .cases-item-logo {
+  background-image: url('./Images/cases/case8.png');
+}
+.cases-item:nth-child(15) .cases-item-logo {
+  background-image: url('./Images/cases/case9.png');
 }
 .cases-item:nth-child(11) .cases-item-logo,
 .cases-item:nth-child(12) .cases-item-logo,

@@ -58,9 +58,9 @@ export default function Cases() {
                 Meet IT Arena 2020 Startup Competition Semi-Finalists
               </div>
               <div className="gradient-date">Sep 28, 2020</div>
-              <a href={link10} className="gradient-link">
-                <img src={link} />
-                {link10}
+              <a href={link4} className="gradient-link">
+                <img src={link4} />
+                {link4}
               </a>
             </div>
           </div>
