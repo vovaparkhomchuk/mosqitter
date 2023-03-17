@@ -134,7 +134,7 @@ export default function Form() {
           02000 */}
         </div>
         <div className="brand-contacts">
-          +1 (272) 634-8778
+          +1 (973) 787-67-18
           <br />
           office@mosqitter.com
         </div>
