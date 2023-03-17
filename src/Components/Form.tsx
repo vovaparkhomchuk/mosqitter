@@ -123,11 +123,9 @@ export default function Form() {
         <div className="brand-adress">
           The East Stroudsburg University Innovation Center.
           <br />
-          562 Independence Rd,
+          562 Independence Rd., Suite 229
           <br />
-          East Stroudsburg,
-          <br />
-          PA 18301,
+          East Stroudsburg, PA, 18301
           <br />
           United States
           {/* <br />
@@ -145,11 +143,9 @@ export default function Form() {
           Mosquito Control Ltd.
         </div>
         <div className="brand-adress">
-          13 Kharkivske shosse
+          13 Kharkivske shosse str.
           <br />
-          str. Poltava,
-          <br />
-          36008,
+          Poltava, 36008,
           <br />
           Ukraine
           {/* <br />

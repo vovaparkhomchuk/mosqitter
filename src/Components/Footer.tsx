@@ -4,8 +4,9 @@ import ios from '../Images/ios.png';
 import android from '../Images/android.png';
 import inn from '../Images/in.png';
 import fb from '../Images/fb.png';
-import appstoreQR from '../Images/appstore_qr.png';
-import playstoreQR from '../Images/playstore_qr.png';
+import appstoreQR from '../Images/qr_appsore.png';
+
+import playstoreQR from '../Images/qr_playstore.png';
 import FileSaver from 'file-saver';
 import { Link as RouterLink } from 'react-router-dom';
 
