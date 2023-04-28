@@ -1433,6 +1433,11 @@ input[type='checkbox']:checked:after {
     width: 45%;
   }
 
+  .startup-info-container {
+    display: none;
+  }
+  
+
   .is--flex {display: block}
 
   .footer {

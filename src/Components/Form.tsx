@@ -118,16 +118,32 @@ export default function Form() {
         </div>
         <div className="brand-ltd">
           <img src={usa} className="usa-logo" />
-          Mosquito Control Ltd.
+          Mosqitter Inc
         </div>
         <div className="brand-adress">
-          The East Stroudsburg University Innovation Center.
+          NewLab
           <br />
+          9 Morris Ave
+          <br />
+          Brooklyn, New York, 11205
+          <br />
+          {/*United States*/}
+          {/* <br />
+          8 Moskovska str.
+          <br />
+          02000 */}
+        </div>
+        <div className="brand-ltd">
+          The East Stroudsburg University Innovation Center
+        </div>
+        <div className="brand-adress">
           562 Independence Rd., Suite 229
           <br />
           East Stroudsburg, PA, 18301
           <br />
           United States
+          <br />
+          {/*United States*/}
           {/* <br />
           8 Moskovska str.
           <br />
@@ -143,11 +159,11 @@ export default function Form() {
           Mosquito Control Ltd.
         </div>
         <div className="brand-adress">
-          13 Kharkivske shosse str.
-          <br />
-          Poltava, 36008,
-          <br />
-          Ukraine
+          {/*13 Kharkivske shosse str.*/}
+          {/*<br />*/}
+          {/*Poltava, 36008,*/}
+          {/*<br />*/}
+          {/*Ukraine*/}
           {/* <br />
           8 Moskovska str.
           <br />
@@ -155,6 +171,8 @@ export default function Form() {
         </div>
         <div className="brand-contacts">
           +380 96 329 5768
+          <br />
+          office@mosqitter.com
         </div>
       </div>
       <div className="form-block">
